@@ -1,0 +1,1 @@
+<Project name="BootLoader"><File path="source\boot.c"></File><File path="Makefile"></File><File path="source\fat.c"></File><File path="source\fat.h"></File><File path="source\patches\patch.c"></File><File path="source\patches\patch.h"></File><File path="source\patches\patch_data.h"></File></Project>
