@@ -1,0 +1,28 @@
+LOAD_ROM 0x08000000 NOCOMPRESS 0x02000000
+{
+	; ROM
+	RO +0
+	{
+		* (+ENTRY+FIRST) ; boot code - must be located first
+		* (.text)
+		* (.rodata)
+	}
+	
+	; EWRAM
+	EWRAM 0x02000000 0x00040000
+	{
+		* (+RW)
+	}
+	
+	ZI +0x0
+	{
+		* (+ZI)
+	}
+	
+	IWRAM 0x03000000 0x00008000
+	{
+		* (.iwram)
+		* (iwram)
+		*armlib/fz* (+RO)
+	}
+}
