@@ -1,6 +1,7 @@
 #include <nds.h>
 #include <stdio.h>
 #include <nds/arm9/input.h>
+#include <nds/registers_alt.h>
 #include <math.h>
 #include <sys/dir.h>
 #include <unistd.h>
@@ -335,7 +336,8 @@ int main(void)
 		int down = keysDown();
 		int up   = keysUp();
 		
-		touchPosition touchPos = touchReadXY();
+		touchPosition touchPos;
+		touchRead(&touchPos);
 		
 		if (down & KEY_TOUCH)
 		{
