@@ -1,8 +1,6 @@
 #include <nds.h>
 #include "nds_loader_arm7.h"
 
-touchPosition first,tempPos;
-
 void VcountHandler() {
 	inputGetAndSend();
 }
