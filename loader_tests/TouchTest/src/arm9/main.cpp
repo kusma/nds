@@ -212,7 +212,7 @@ void scanDirectory()
 
 int main(void)
 {
-	powerON(POWER_ALL_2D);
+	powerOn(POWER_ALL_2D);
 	
 	// put the main screen on the bottom lcd
 	lcdMainOnBottom();
